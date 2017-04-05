@@ -303,8 +303,10 @@ public class Fragment1 extends Fragment {
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(num ==0){
+                if(num ==0 ){
                     Toast.makeText(getActivity(), "테이블을 선택해주세요", Toast.LENGTH_SHORT).show();
+                }else if(t4.getText().toString().length() ==0){
+                    Toast.makeText(getActivity(), "주문을 먼저 해주세요", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     final View dlgview = inflater.inflate(R.layout.box, null);
@@ -324,7 +326,6 @@ public class Fragment1 extends Fragment {
                     final TextView t8 = (TextView) fragview.findViewById(R.id.t8);
                     final TextView t10 = (TextView) fragview.findViewById(R.id.t10);
                     final TextView t12 = (TextView) fragview.findViewById(R.id.t12);
-
 
                     if (num == 1) {
                         if (rbnum == 1) {
